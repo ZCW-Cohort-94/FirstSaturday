@@ -145,19 +145,24 @@ public class WriteLoops {
             i = i - 1;
         } while (i > 0);
         // what's the primary difference between them?!?
+        // Do...while will print out Eww before checking the condition. While loops check the condition first.
     }
 
     // Write a WHILE loop that checks “gpsCurrentLocation()”
     // and if that is not equal to “Home” then and it calls “driveSomeMore()”.
     // After the loop is done, print “Honey, I’m Home!”
+    // you need to use a .equals for two Strings.
+    // calling
+    //w = w + 1
+    // each time through the inner loop
     public int driveHome() {
         int w = 0;
-
-        // you need to use a .equals for two Strings.
-
-            // calling
+        while(!gpsCurrentLocation().equals("Home")){
+            driveSomeMore();
             w = w + 1;
-            // each time through the inner loop
+        }
+        System.out.println("Honey I'm Home!");
+
         
 
             return w;
