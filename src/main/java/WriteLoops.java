@@ -181,6 +181,11 @@ public class WriteLoops {
         int runningScore = 0;
 
         // do your while loop here
+
+        while (runningScore < highestScore){
+            runningScore = runningScore+currentScore;
+
+        }
  
             // calling
             w = w + 1;
