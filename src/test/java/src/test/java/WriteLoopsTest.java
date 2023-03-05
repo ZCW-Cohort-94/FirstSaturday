@@ -127,4 +127,25 @@ public class WriteLoopsTest
         WriteLoops writeLoo1 = new WriteLoops();
         assertEquals(3, writeLoo1.checkServerStatus());
     }
+
+    @Test
+    public void TestLoop50By70()
+    {
+        WriteLoops writeLoo1 = new WriteLoops();
+        assertEquals(7, writeLoo1.loop50by7());
+    }
+
+    @Test
+    public void FooForLoop(){
+        WriteLoops writeLoo1 = new WriteLoops();
+        assertEquals(7, writeLoo1.rewriteFooAsFor());
+    }
+
+    @Test
+    public void FooAsWhile(){
+        WriteLoops writeLoo1 = new WriteLoops();
+        assertEquals(7, writeLoo1.rewriteFooAsWhile());
+    }
+
+
 }
