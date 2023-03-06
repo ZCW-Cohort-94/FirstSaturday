@@ -216,13 +216,14 @@ public class WriteLoops {
 
         while(serverIsRunning() == true) {
             waitFor(5);
+            w = w + 1;
         }
         if(serverIsRunning() == false) {
             sendEmergencyText("Help!", adminPhoneNumber);
-            tryServerRestart();
+            tryServerRestart("Help!", adminPhoneNumber);
         }
         // calling
-        w = w + 1;
+
         // each time through the inner loop
         
         return w;
@@ -275,13 +276,14 @@ public class WriteLoops {
         int w = 0;
         int sumOfThrees = 0;
         for(int i = 0; i < threes_array.length; i++) {
-            
+            sumOfThrees = sumOfThrees + threes_array[i];
+            w = w + 1;
 
         }
 
  
             // calling
-            w = w + 1;
+
             // each time through the inner loop
         
         System.out.print("The Sum is ");
