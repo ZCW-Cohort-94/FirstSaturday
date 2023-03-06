@@ -324,9 +324,17 @@ public class WriteLoops {
         boolean onTime = true;
 
         // ADD YOUR CODE here.
+        boolean  yardsNeedsMowed = true;
+        while(isSummer()) {
+            if(yardsNeedsMowed) {
+                yellAtJuniorToMowLawn();
+            }
+            w = w + 1;
+        }
+        sendJuniorBackToSchool("Enjoy your first day of school!");
  
             // be sure to call
-            w = w + 1;
+            //w = w + 1;
             // each time inside the loop
         
         return w;
