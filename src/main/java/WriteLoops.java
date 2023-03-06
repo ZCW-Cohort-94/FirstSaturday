@@ -280,8 +280,6 @@ public class WriteLoops {
             w = w + 1;
 
         }
-
- 
             // calling
 
             // each time through the inner loop
@@ -297,10 +295,15 @@ public class WriteLoops {
     public int rewriteFooAsWhile() {
         int w = 0;
         int sumOfThrees = 0;
+        int i = 0;
+        while(i < threes_array.length) {
+            sumOfThrees = sumOfThrees + threes_array[i];
+            w += 1;
+        }
 
  
             // calling
-            w = w + 1;
+            //w = w + 1;
             // each time through the inner loop
         
         System.out.print("The Sum is ");
