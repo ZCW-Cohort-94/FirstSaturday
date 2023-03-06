@@ -87,8 +87,8 @@ public class WriteLoops {
 
     public int nestedFors() {
         int w = 0;
-        for(int i = 0; i <= 20; i++) {
-            for(int j = 0; j < 4; j++) {
+        for(int i = 0; i < 20; i++) {
+            for(int j = 0; j <=  4; j++) {
 
                 // Write a nested FOR loop(s), where one counts from
                 // 0 to less than 20 and the inner one counts from 0 to 4
@@ -101,21 +101,19 @@ public class WriteLoops {
 
     public int helloZipCode() {
         int w = 0;
-        for(int i = 5; i <= 105; i++) {
-            if(w > 51) {
+        for (int i = 4; i < 105; i++) {
+            if (i == 51) {
                 System.out.println("Hello Zipcode");
+                break;
             } else {
                 w = w + 1;
             }
         }
-
         // Write a FOR loop that counts from 5 to 105. Put an IF
         // statement inside the loop that checks the
         // loop index counter and if it’s greater than 51,
         // prints “Hello Zipcode” instead of the statement w = w + 1;
-
                 // calling
-                w = w + 1;
             // each time through the inner loop
         
         return w;
@@ -146,15 +144,16 @@ public class WriteLoops {
         int w = 0;
         while(!gpsCurrentLocation().equals("Home")) {
             driveSomeMore();
-
-
+            if(gpsCurrentLocation().equals("Home")) {
+                System.out.println("Honey, I'm Home!");
+            }
             // you need to use a .equals for two Strings.
 
             // calling
             w = w + 1;
             // each time through the inner loop
         }
-        System.out.println("Honey, I'm Home!");
+
             return w;
     }
 
@@ -165,20 +164,23 @@ public class WriteLoops {
     // "runningScore"
     // and then sets “currentScore” to “gameNextScore()”
 
-    public int checkGameScore() {
+    public boolean checkGameScore() {
         int w = 0;
         int highestScore = 236;
         int currentScore = gameNextScore();
         int runningScore = 0;
 
         // do your while loop here
-
-
-            // calling
+        while(runningScore < highestScore) {
+            runningScore += currentScore;
+            currentScore = gameNextScore();
             w = w + 1;
+        }
+            // calling
+            //w = w + 1;
             // each time through the inner loop
 
-        return w; // >= 3;
+        return w >= 3; // >= 3;
     }
 
     // Rewrite the previous WHILE loop as a DO..WHILE loop.
@@ -190,9 +192,15 @@ public class WriteLoops {
         int runningScore = 0;
 
         // do your while loop here
+        do {
+            runningScore += currentScore;
+            currentScore = gameNextScore();
+            w = w + 1;
+
+        } while (runningScore < highestScore);
 
             // calling
-            w = w + 1;
+            //w = w + 1;
             // each time through the inner loop
 
         return w >= 3;
@@ -205,8 +213,14 @@ public class WriteLoops {
     public int checkServerStatus() {
         int w = 0;
         String adminPhoneNumber = "+1 202 456 1111";
-        
 
+        while(serverIsRunning() == true) {
+            waitFor(5);
+        }
+        if(serverIsRunning() == false) {
+            sendEmergencyText("Help!", adminPhoneNumber);
+            tryServerRestart();
+        }
         // calling
         w = w + 1;
         // each time through the inner loop
@@ -219,10 +233,14 @@ public class WriteLoops {
     // and if it is, add 7 to “i”
     public int loop50by7() {
         int w = 0;
+        int i = 7;
 
-
-            // calling
+        while(i < 50) {
+            i += 7;
             w = w + 1;
+        }
+            // calling
+            //w = w + 1;
             // each time through the inner loop
         
         return w;
@@ -256,6 +274,10 @@ public class WriteLoops {
     public int rewriteFooAsFor() {
         int w = 0;
         int sumOfThrees = 0;
+        for(int i = 0; i < threes_array.length; i++) {
+            
+
+        }
 
  
             // calling
