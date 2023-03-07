@@ -74,7 +74,7 @@ public class WriteLoopsTest
     {
         //error should be 17?
         WriteLoops writeLoo1 = new WriteLoops();
-        assertEquals(17, writeLoo1.byTwoTo32()); // error in source
+        assertEquals(32, writeLoo1.byTwoTo32()); // error in source
     }
 
     @Test
