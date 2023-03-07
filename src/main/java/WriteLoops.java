@@ -112,7 +112,12 @@ public class WriteLoops {
         // prints “Hello Zipcode” instead of the statement w = w + 1;
 
                 // calling
-                w = w + 1;
+        for(int i = 5; i <= 105; i++){
+            if(i > 51){
+                System.out.println("Hello Zipcode");
+            }
+        }
+
             // each time through the inner loop
         
         return w;
