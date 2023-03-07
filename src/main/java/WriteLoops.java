@@ -56,7 +56,7 @@ public class WriteLoops {
         // Write a FOR loop that counts down from 100 to 0.
         // calling
         for (int i = 100; i > 0; i--) {
-            w = w - 1;
+            w = w + 1;
             // each time through the loop
         }
         return w;
@@ -74,11 +74,11 @@ public class WriteLoops {
     }
 
     public int countDownFrom5000() {
-        int w = 5000;
+        int w = 0;
         // Write a FOR loop from 1 to less than 5001 by 11s.
         // calling
-        for (int i = 1000; i > 0; i--) {
-            w = w - 1;
+        for (int i = 455; i > 0; i--) {
+            w = w + 1;
         }
         // each time through the loop
         
@@ -91,7 +91,13 @@ public class WriteLoops {
         // Write a nested FOR loop(s), where one counts from
         // 0 to less than 20 and the inner one counts from 0 to 4
                 // calling
+        for(int i = 0; i<20; i++){
+            for(int a = 0; a<=4; a++){
                 w = w + 1;
+            }
+        }
+
+
                 // each time through the inner loop
 
         return w;
