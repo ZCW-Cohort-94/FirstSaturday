@@ -149,11 +149,16 @@ public class WriteLoops {
     // After the loop is done, print “Honey, I’m Home!”
     public int driveHome() {
         int w = 0;
+        while(gpsCurrentLocation()!="Home"){
+            driveSomeMore();
+            w = w + 1;
+        }
+        System.out.println("Honey, I'm home!");
 
         // you need to use a .equals for two Strings.
 
             // calling
-            w = w + 1;
+
             // each time through the inner loop
         
 
@@ -173,17 +178,19 @@ public class WriteLoops {
         int runningScore = 0;
 
         // do your while loop here
-        while(runningScore < highestScore){
+        do{
             runningScore += currentScore;
             currentScore = gameNextScore();
             w = w + 1;
-        }
- 
-            // calling
+        }while(runningScore < highestScore);
+        return w;
 
-            // each time through the inner loop
+
+        // >= 3;
+        // calling
+        // each time through the inner loop
         
-        return w; // >= 3;
+
     }
 
     // Rewrite the previous WHILE loop as a DO..WHILE loop.
