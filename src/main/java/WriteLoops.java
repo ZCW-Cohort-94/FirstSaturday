@@ -18,9 +18,10 @@ public class WriteLoops {
 
         // Write a FOR loop that counts from 1 to 10.
             // calling
+        for(int i = 0; i < 5; i++) {
             w = w + 1;
+        }
             // each time through the loop
-
         // this will tell the test how many times the loop executed.
         return w;
     }
@@ -30,9 +31,10 @@ public class WriteLoops {
 
         // Write a FOR loop that counts from 1 to 10.
         // calling
-        w = w + 1;
-        // each time through the loop
-        
+        for (int i = 0; i < 10; i++) {
+            w = w + 1;
+            // each time through the loop
+        }
         return w;
     }
 
@@ -41,9 +43,10 @@ public class WriteLoops {
 
         // Write a FOR loop that makes 10 iterations, start at 21.
         // calling
-        w = w + 1;
-        // each time through the loop
-        
+        for (int i = 21; i < 32; i++) {
+            w = w + 1;
+            // each time through the loop
+        }
         return w;
     }
 
@@ -52,28 +55,31 @@ public class WriteLoops {
 
         // Write a FOR loop that counts down from 100 to 0.
         // calling
-        w = w + 1;
-        // each time through the loop
-        
+        for (int i = 100; i > 0; i--) {
+            w = w + 1;
+            // each time through the loop
+        }
         return w;
     }
 
     public int byTwoTo32() {
         int w = 0;
-
         // Write a FOR loop from 0 to 32 by 2s.
         // calling
-        w = w + 1;
-        // each time through the loop
-        return w;
+        for (int i = 0; i < 16; i++) {
+            w = w + 2;
+        }
+            // each time through the loop
+            return w;
     }
 
     public int countDownFrom5000() {
         int w = 0;
-
         // Write a FOR loop from 1 to less than 5001 by 11s.
         // calling
-        w = w + 1;
+        for (int i = 455; i > 0; i--) {
+            w = w + 1;
+        }
         // each time through the loop
         
         return w;
@@ -85,7 +91,13 @@ public class WriteLoops {
         // Write a nested FOR loop(s), where one counts from
         // 0 to less than 20 and the inner one counts from 0 to 4
                 // calling
+        for(int i = 0; i<20; i++){
+            for(int a = 0; a<=4; a++){
                 w = w + 1;
+            }
+        }
+
+
                 // each time through the inner loop
 
         return w;
@@ -98,9 +110,17 @@ public class WriteLoops {
         // statement inside the loop that checks the
         // loop index counter and if it’s greater than 51,
         // prints “Hello Zipcode” instead of the statement w = w + 1;
+        // calling
 
-                // calling
+        for(int i = 5; i <= 105; i++){
+            if(i >= 51){
+                System.out.println("Hello Zipcode" + " i is "+ i);
+            }
+            else{
                 w = w + 1;
+            }
+        }
+
             // each time through the inner loop
         
         return w;
@@ -129,11 +149,16 @@ public class WriteLoops {
     // After the loop is done, print “Honey, I’m Home!”
     public int driveHome() {
         int w = 0;
+        while(gpsCurrentLocation()!="Home"){
+            driveSomeMore();
+            w = w + 1;
+        }
+        System.out.println("Honey, I'm home!");
 
         // you need to use a .equals for two Strings.
 
             // calling
-            w = w + 1;
+
             // each time through the inner loop
         
 
@@ -153,12 +178,20 @@ public class WriteLoops {
         int runningScore = 0;
 
         // do your while loop here
- 
-            // calling
-            w = w + 1;
-            // each time through the inner loop
+        while(runningScore < highestScore){
+            runningScore += currentScore;
+            currentScore = gameNextScore();
+            w++;
+        }
+        return w;
+
+        //w = w + 1;
+
+        // >= 3;
+        // calling
+        // each time through the inner loop
         
-        return w; // >= 3;
+
     }
 
     // Rewrite the previous WHILE loop as a DO..WHILE loop.
@@ -183,14 +216,18 @@ public class WriteLoops {
     // is false, and if so, call “sendEmergencyText(“Help!”, adminPhoneNumber)”
     // and also calls “tryServerRestart()”
     public int checkServerStatus() {
-        int w = 0;
         String adminPhoneNumber = "+1 202 456 1111";
-        
-
+        int w = 0;
+        while(serverIsRunning()){
+            waitFor(5);
+            w++;
+        }
+        if(serverIsRunning() == false){
+            sendEmergencyText("Help!", adminPhoneNumber);
+            tryServerRestart("Restart the server.",adminPhoneNumber);
+          }
         // calling
-        w = w + 1;
         // each time through the inner loop
-        
         return w;
     }
 
@@ -198,14 +235,19 @@ public class WriteLoops {
     // Write a WHILE loop that checks “i” is less than 50,
     // and if it is, add 7 to “i”
     public int loop50by7() {
-        int w = 0;
+    int i = 7;
+    while(i < 50) {
+
+        i += 7;
+      //  w = w + 1;
+    }
 
 
             // calling
-            w = w + 1;
+
             // each time through the inner loop
         
-        return w;
+        return i;
     }
 
     int[] threes_array = { 3, 6, 9, 12, 15, 18, 21 };

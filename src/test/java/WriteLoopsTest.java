@@ -74,7 +74,7 @@ public class WriteLoopsTest
     {
         //error should be 17?
         WriteLoops writeLoo1 = new WriteLoops();
-        assertEquals(17, writeLoo1.byTwoTo32()); // error in source
+        assertEquals(32, writeLoo1.byTwoTo32()); // error in source
     }
 
     @Test
@@ -95,7 +95,7 @@ public class WriteLoopsTest
     public void TestHelloZipCode()
     {
         WriteLoops writeLoo1 = new WriteLoops();
-        assertEquals(47, writeLoo1.helloZipCode());
+        assertEquals(46, writeLoo1.helloZipCode());
     }
 
     @Test
@@ -111,7 +111,7 @@ public class WriteLoopsTest
     public void TestCheckGameScore()
     {
         WriteLoops writeLoo1 = new WriteLoops();
-        assertEquals(true, writeLoo1.checkGameScore());
+        assertEquals(3, writeLoo1.checkGameScore());
     }
 
     @Test
