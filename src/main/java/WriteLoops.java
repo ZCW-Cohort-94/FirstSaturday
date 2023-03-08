@@ -110,11 +110,14 @@ public class WriteLoops {
         // statement inside the loop that checks the
         // loop index counter and if it’s greater than 51,
         // prints “Hello Zipcode” instead of the statement w = w + 1;
+        // calling
 
-                // calling
         for(int i = 5; i <= 105; i++){
-            if(i > 51){
-                System.out.println("Hello Zipcode");
+            if(i >= 51){
+                System.out.println("Hello Zipcode" + " i is "+ i);
+            }
+            else{
+                w = w + 1;
             }
         }
 
@@ -170,9 +173,14 @@ public class WriteLoops {
         int runningScore = 0;
 
         // do your while loop here
+        while(runningScore < highestScore){
+            runningScore += currentScore;
+            currentScore = gameNextScore();
+            w = w + 1;
+        }
  
             // calling
-            w = w + 1;
+
             // each time through the inner loop
         
         return w; // >= 3;
@@ -200,14 +208,18 @@ public class WriteLoops {
     // is false, and if so, call “sendEmergencyText(“Help!”, adminPhoneNumber)”
     // and also calls “tryServerRestart()”
     public int checkServerStatus() {
-        int w = 0;
         String adminPhoneNumber = "+1 202 456 1111";
-        
-
+        int w = 0;
+        while(serverIsRunning()){
+            waitFor(5);
+            w++;
+        }
+        if(serverIsRunning() == false){
+            sendEmergencyText("Help!", adminPhoneNumber);
+            tryServerRestart("Restart the server.",adminPhoneNumber);
+          }
         // calling
-        w = w + 1;
         // each time through the inner loop
-        
         return w;
     }
 
@@ -215,14 +227,19 @@ public class WriteLoops {
     // Write a WHILE loop that checks “i” is less than 50,
     // and if it is, add 7 to “i”
     public int loop50by7() {
-        int w = 0;
+    int i = 7;
+    while(i < 50) {
+
+        i += 7;
+      //  w = w + 1;
+    }
 
 
             // calling
-            w = w + 1;
+
             // each time through the inner loop
         
-        return w;
+        return i;
     }
 
     int[] threes_array = { 3, 6, 9, 12, 15, 18, 21 };
